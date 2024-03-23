@@ -10,3 +10,24 @@
 	40% {transform: translateY(-1.5rem);}
 	60% {transform: translateY(-.75rem);}
 }
+
+.fadeout-animation {
+	transition: all 0.5s ease-in-out 0s;
+	opacity: 0;
+}
+
+@keyframes fadeout {
+	from { opacity: 1; }
+	to { opacity: 0; }
+}
+
+
+.fadein-animation {
+	transition: all 0.5s ease-in-out 0s;
+	opacity: 1;
+}
+
+@keyframes fadein {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}

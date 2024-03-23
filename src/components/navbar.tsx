@@ -13,7 +13,7 @@ export function NavbarContent() {
 
 export function NavbarFixed(props: any) {
     return (
-        <div className={`fixed z-10 top-0 left-0 w-full rounded-b-2xl backdrop-blur-md bg-opacity-50 bg-sky-100 ${(props.scrollPos > 85 || props.scrollPos == undefined) ? "visible" : "invisible"}`}>
+        <div className={`fixed z-10 top-0 left-0 w-full rounded-b-2xl backdrop-blur-md bg-opacity-50 bg-sky-100 ${(props.navbarHomeTop < 0 || props.navbarHomeTop == undefined) ? "visible" : "invisible"}`}>
         <NavbarContent />
       </div>
     )
@@ -21,7 +21,7 @@ export function NavbarFixed(props: any) {
 
 export function NavbarHome(props: any) {
  return (
-    <div className={`z-10 ${props.scrollPos > 85 ? "invisible" : "visible"}`}>
+    <div ref={props.passRef} className={`z-10 ${props.navbarHomeTop < 0 ? "invisible" : "visible"} mb-12`}>
     <NavbarContent />
   </div>
  )
