@@ -1,8 +1,7 @@
 "use client";
+import { AboutMe } from "@/components/aboutme";
+import { NavbarContent } from "@/components/navbarcontent";
 import { AllSkills } from "@/components/skills";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { SyntheticEvent, useEffect, useRef, useState } from "react";
 
 export default function Home() {
@@ -13,13 +12,13 @@ export default function Home() {
     setScrollPos(scrollPercent);
   }
 
-  const arrowBtn = useRef(null);
+  const arrowBtn = useRef<null | HTMLDivElement>(null);
 
   const handleArrowClick = () => {
-    arrowBtn.current.scrollIntoView({ behavior: "smooth" });
-
+    if (arrowBtn.current) {
+      arrowBtn.current.scrollIntoView({ behavior: "smooth" });
+    }
   }
-
 
   return (
     <main>
@@ -38,25 +37,17 @@ export default function Home() {
             <h2 className="text-l md:text-2xl mt-4 text-gray-100">Web developer</h2>
           </div>
 
-          <div className={`flex justify-between z-10 mx-auto mb-10 container px-10 ${scrollPos > 85 ? "invisible" : "visible"}`}>
-            <a href="https://github.com/najdek" className="flex flex-row items-center"><FontAwesomeIcon icon={faGithub} /><span className="mx-2">najdek</span></a>
-            <a href="mailto:mateusz@najdek.me" className="flex flex-row items-center"><FontAwesomeIcon icon={faEnvelope} /><span className="mx-2">mateusz@najdek.me</span></a>
+          <div className={`z-10 ${scrollPos > 85 ? "invisible" : "visible"}`}>
+            <NavbarContent />
           </div>
         </section>
         <section className="flex justify-between flex-col snap-always snap-start min-h-screen relative bg-gradient-to-b from-sky-100 to-sky-300">
           <div className={`fixed z-10 top-0 left-0 w-full rounded-b-2xl backdrop-blur-md bg-opacity-50 bg-sky-100 ${scrollPos > 85 ? "visible" : "invisible"}`}>
-            <div className={`flex justify-between z-10 h-16 mx-auto container px-10`}>
-              <a href="https://github.com/najdek" className="flex flex-row items-center"><FontAwesomeIcon icon={faGithub} /><span className="mx-2">najdek</span></a>
-              <a href="mailto:mateusz@najdek.me" className="flex flex-row items-center"><FontAwesomeIcon icon={faEnvelope} /><span className="mx-2">mateusz@najdek.me</span></a>
-            </div>
+            <NavbarContent />
           </div>
           <div className="flex flex-col mx-auto mt-16 min-h-screen">
-
-            <div className="flex flex-col mx-auto text-center relative">
-              <div className="text-3xl text-gray-900">About Me</div>
-              <div className="text-l mt-4 text-gray-900 bg-sky-50 p-6 rounded-lg drop-shadow-md max-w-sm sm:max-w-2xl">Since childhood, I've been fascinated by technology and programming. It's a passion that's stuck with me through the years and continues to drive me forward. With a natural curiosity and a love for problem-solving, I'm always eager to explore new developments in the tech world and apply my skills to create innovative solutions.</div>
-            </div>
-<AllSkills />
+            <AboutMe />
+            <AllSkills />
           </div>
         </section>
       </div>
