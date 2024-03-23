@@ -10,3 +10,19 @@ export function NavbarContent() {
         </div>
     )
 }
+
+export function NavbarFixed(props: any) {
+    return (
+        <div className={`fixed z-10 top-0 left-0 w-full rounded-b-2xl backdrop-blur-md bg-opacity-50 bg-sky-100 ${props.scrollPos > 85 ? "visible" : "invisible"}`}>
+        <NavbarContent />
+      </div>
+    )
+}
+
+export function NavbarHome(props: any) {
+ return (
+    <div className={`z-10 ${props.scrollPos > 85 ? "invisible" : "visible"}`}>
+    <NavbarContent />
+  </div>
+ )
+}

@@ -1,6 +1,7 @@
 "use client";
 import { AboutMe } from "@/components/aboutme";
-import { NavbarContent } from "@/components/navbarcontent";
+import { NavbarFixed, NavbarHome } from "@/components/navbar";
+import { AllProjects } from "@/components/projects";
 import { AllSkills } from "@/components/skills";
 import { SyntheticEvent, useEffect, useRef, useState } from "react";
 
@@ -31,23 +32,18 @@ export default function Home() {
               <div className={`rotate-90 text-4xl text-sky-600 ${scrollPos > 5 ? "invisible" : "visible"}`}>{'->'}</div>
             </div>
           </div>
-
           <div className="flex flex-col mx-auto text-center pt-[30vh] relative">
             <h1 className="text-3xl md:text-5xl text-white">Mateusz Najdek</h1>
             <h2 className="text-l md:text-2xl mt-4 text-gray-100">Web developer</h2>
           </div>
-
-          <div className={`z-10 ${scrollPos > 85 ? "invisible" : "visible"}`}>
-            <NavbarContent />
-          </div>
+          <NavbarHome scrollPos={scrollPos} />
         </section>
         <section className="flex justify-between flex-col snap-always snap-start min-h-screen relative bg-gradient-to-b from-sky-100 to-sky-300">
-          <div className={`fixed z-10 top-0 left-0 w-full rounded-b-2xl backdrop-blur-md bg-opacity-50 bg-sky-100 ${scrollPos > 85 ? "visible" : "invisible"}`}>
-            <NavbarContent />
-          </div>
+          <NavbarFixed scrollPos={scrollPos} />
           <div className="flex flex-col mx-auto mt-16 min-h-screen">
             <AboutMe />
             <AllSkills />
+            <AllProjects />
           </div>
         </section>
       </div>
