@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <main>
       <div onScroll={handleScroll} className={`${scrollPos < 90 ? "snap-y" : "snap-none"} snap-mandatory overflow-y-scroll h-screen flex-grow z-0 bg-gradient-to-t from-sky-600 to-sky-400`}>
-        <section className="flex justify-between flex-col h-full pb-[calc(100vh-100dvh)] relative snap-always snap-center">
+        <section className="flex justify-between flex-col supports-[height:100cqh]:h-[100cqh] supports-[height:100svh]:h-[100svh] relative snap-always snap-center">
           <div className="absolute z-1 bottom-0 left-0 w-full min-h-[50vh] bg-top bg-cover" style={{ backgroundImage: `url('/waves-02.svg')` }}>
           </div>
           <div ref={arrowBtn} className="absolute z-1 bottom-36 sm:bottom-24 lg:bottom-16 left-1/2 -translate-x-1/2 p-8 cursor-pointer" onClick={handleArrowClick}>
