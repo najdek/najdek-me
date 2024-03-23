@@ -14,9 +14,9 @@ function Skill(props: any) {
 
 export function AllSkills() {
     var out: any = [];
-    skillList.forEach(element => {
+    skillList.forEach((element, i) => {
         out.push(
-            <Skill name={element.name} desc={element.desc} />
+            <Skill key={`"skill-${i}`} name={element.name} desc={element.desc} />
         );
     });
     return (

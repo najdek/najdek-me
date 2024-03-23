@@ -5,15 +5,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export function NavbarContent() {
     return (
         <div className={`flex justify-between z-10 h-16 mx-auto container px-10`}>
-            <a href="https://github.com/najdek" className="flex flex-row items-center"><FontAwesomeIcon icon={faGithub} /><span className="mx-2">najdek</span></a>
-            <a href="mailto:mateusz@najdek.me" className="flex flex-row items-center"><FontAwesomeIcon icon={faEnvelope} /><span className="mx-2">mateusz@najdek.me</span></a>
+            <a href="https://github.com/najdek" className="flex flex-row items-center"><FontAwesomeIcon className="h-4" icon={faGithub} /><span className="mx-2">najdek</span></a>
+            <a href="mailto:mateusz@najdek.me" className="flex flex-row items-center"><FontAwesomeIcon className="h-4" icon={faEnvelope} /><span className="mx-2">mateusz@najdek.me</span></a>
         </div>
     )
 }
 
 export function NavbarFixed(props: any) {
     return (
-        <div className={`fixed z-10 top-0 left-0 w-full rounded-b-2xl backdrop-blur-md bg-opacity-50 bg-sky-100 ${props.scrollPos > 85 ? "visible" : "invisible"}`}>
+        <div className={`fixed z-10 top-0 left-0 w-full rounded-b-2xl backdrop-blur-md bg-opacity-50 bg-sky-100 ${(props.scrollPos > 85 || props.scrollPos == undefined) ? "visible" : "invisible"}`}>
         <NavbarContent />
       </div>
     )
