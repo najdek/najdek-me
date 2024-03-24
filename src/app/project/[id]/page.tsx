@@ -33,8 +33,8 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
   return (
     <div>
       <NavbarFixed />
-      <section className="flex justify-between flex-col min-h-screen relative bg-gradient-to-b from-sky-100 to-sky-300">
-        <div className="mx-auto mt-20 min-h-screen container">
+      <section className="flex justify-between flex-col min-h-screen relative bg-gradient-to-b from-sky-100 to-sky-300 pb-16">
+        <div className="mx-auto mt-20 container">
           <div onClick={() => router.back()} className="bg-blue-300 hover:bg-sky-300 max-w-max mx-auto p-2 rounded-lg drop-shadow-sm cursor-pointer">
             <div className="text-l">{`<- Go Back`}</div>
           </div>
@@ -48,10 +48,9 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
               </div>
               <div className="col-span-1 order-3 rounded-lg drop-shadow-md p-6 bg-sky-50">
                 <div className="text-l whitespace-pre-line">{project.fullDesc}</div>
-                <div>
+                <div className="mt-6">
                   <ProjectDescLink type="github" url={project.githubUrl} />
                   <ProjectDescLink type="page" url={project.pageUrl} />
-
                 </div>
               </div>
             </div>

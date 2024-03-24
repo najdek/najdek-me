@@ -50,7 +50,7 @@ export default function Home() {
           </div>
           <NavbarHome passRef={navbarHome} navbarHomeTop={navbarHomeTop} />
         </section>
-        <section ref={bottomSection} className="flex justify-between flex-col min-h-screen relative bg-gradient-to-b from-sky-100 to-sky-300">
+        <section ref={bottomSection} className="flex justify-between flex-col min-h-screen relative bg-gradient-to-b from-sky-100 to-sky-300 pb-16">
           <NavbarFixed navbarHomeTop={navbarHomeTop} />
           <div className="flex flex-col mx-auto mt-16 min-h-screen">
             <AboutMe />
