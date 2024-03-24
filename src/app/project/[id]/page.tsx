@@ -1,8 +1,9 @@
 "use client";
 import { projectList } from "@/app/projects";
+import { Gallery } from "@/components/gallery";
 import { NavbarFixed } from "@/components/navbar";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
+
 
 export default function ProjectPage({ params }: { params: { id: string } }) {
   const projectId = params.id;
@@ -39,27 +40,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
           <div className="mt-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               <div className="col-span-1 row-span-2 order-2 lg:order-1 bg-red-500 justify-self-center lg:justify-self-end text-center">
-                <div><Image className="inline" src={project.images[0]} width={640} height={480} alt={`Picture of ${project.name} #0`}></Image></div>
-                <div className="grid grid-rows-1 grid-cols-5 gap-1 mt-1">
-                  <div className="">
-                  <Image src={project.images[1]} width={128} height={96} alt={`Picture of ${project.name} #1`}></Image>
-                  </div>
-                  <div>
-                  <Image src={project.images[1]} width={128} height={96} alt={`Picture of ${project.name} #1`}></Image>
-                  </div>
-                  <div className="">
-                  <Image src={project.images[1]} width={128} height={96} alt={`Picture of ${project.name} #1`}></Image>
-                  </div>
-                  <div>
-                  <Image src={project.images[1]} width={128} height={96} alt={`Picture of ${project.name} #1`}></Image>
-                  </div>                  <div className="">
-                  <Image src={project.images[1]} width={128} height={96} alt={`Picture of ${project.name} #1`}></Image>
-                  </div>
-                  <div>
-                  <Image src={project.images[1]} width={128} height={96} alt={`Picture of ${project.name} #1`}></Image>
-                  </div>
-                </div>
-                
+                <Gallery project={project} />
               </div>
               <div className="col-span-1 order-1 lg:order-2 auto-rows-min bg-blue-500">
                 <h1 className="text-3xl">{project.name}</h1>
