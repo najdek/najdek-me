@@ -1,13 +1,14 @@
 import { projectList } from "@/app/projects";
 import Link from "next/link";
+import Image from "next/image";
 
 function Project(props: any) {
 
     return (
-        <Link href={`./project/${props.id}`} className="dire bg-sky-50 py-2 px-4 rounded-lg drop-shadow-md m-2 w-[256px]">
+        <Link href={`./project/${props.id}`} className="group dire bg-sky-50 hover:bg-sky-100 transition ease-linear py-2 px-4 rounded-lg drop-shadow-md m-2 w-[256px]">
             <div className="font-semibold">{props.name}</div>
-            <div className="bg-blue-200 h-48">image</div>
-            <div className="">{props.desc}</div>
+            <div className="bg-blue-200 h-48 relative overflow-hidden"><Image className="absolute h-full w-full object-cover group-hover:scale-105 transition ease-linear" src={props.coverImg} width={260} height={260} alt={`Picture of ${props.name}`}></Image></div>
+            <div className="">{props.shortDesc}</div>
         </Link>
     )
 }
@@ -16,7 +17,7 @@ export function AllProjects() {
     var out: any = [];
     projectList.forEach((element, i) => {
         out.push(
-            <Project key={`"project-${i}`} id={element.id} name={element.name} desc={element.desc} />
+            <Project key={`"project-${i}`} id={element.id} name={element.name} shortDesc={element.shortDesc} coverImg={element.images[0]} />
         );
     });
     return (
