@@ -1,6 +1,7 @@
 "use client";
 import { projectList } from "@/app/projects";
 import { Gallery } from "@/components/gallery";
+import { ProjectDescLink } from "@/components/links";
 import { NavbarFixed } from "@/components/navbar";
 import { useRouter } from "next/navigation";
 
@@ -34,19 +35,24 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
       <NavbarFixed />
       <section className="flex justify-between flex-col min-h-screen relative bg-gradient-to-b from-sky-100 to-sky-300">
         <div className="mx-auto mt-20 min-h-screen container">
-          <div className="">
-            <div onClick={() => router.back()} className="cursor-pointer text-xl">{`<- Go Back`}</div>
+          <div onClick={() => router.back()} className="bg-blue-300 hover:bg-sky-300 max-w-max mx-auto p-2 rounded-lg drop-shadow-sm cursor-pointer">
+            <div className="text-l">{`<- Go Back`}</div>
           </div>
           <div className="mt-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-              <div className="col-span-1 row-span-2 order-2 lg:order-1 bg-red-500 justify-self-center lg:justify-self-end text-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 grid-rows-[3rem_auto]">
+              <div className="col-span-1 row-span-2 order-2 lg:order-1 justify-self-center lg:justify-self-end text-center p-4 rounded-lg drop-shadow-md bg-sky-50">
                 <Gallery project={project} />
               </div>
-              <div className="col-span-1 order-1 lg:order-2 auto-rows-min bg-blue-500">
-                <h1 className="text-3xl">{project.name}</h1>
+              <div className="col-span-1 order-1 lg:order-2 p-2">
+                <h1 className="text-3xl text-center">{project.name}</h1>
               </div>
-              <div className="col-span-1 order-3 h-full auto-rows-min bg-green-500">
-                <div className="text-l min-h-[256px] lg:min-h-[512px]">{project.fullDesc}</div>
+              <div className="col-span-1 order-3 rounded-lg drop-shadow-md p-6 bg-sky-50">
+                <div className="text-l whitespace-pre-line">{project.fullDesc}</div>
+                <div>
+                  <ProjectDescLink type="github" url={project.githubUrl} />
+                  <ProjectDescLink type="page" url={project.pageUrl} />
+
+                </div>
               </div>
             </div>
           </div>
