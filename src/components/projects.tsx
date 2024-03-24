@@ -7,7 +7,7 @@ function Project(props: any) {
     return (
         <Link href={`./project/${props.id}`} className="group dire bg-sky-50 hover:bg-sky-100 transition ease-linear py-2 px-4 rounded-lg drop-shadow-md m-2 w-[256px]">
             <div className="font-semibold">{props.name}</div>
-            <div className="bg-blue-200 h-48 relative overflow-hidden"><Image className="absolute h-full w-full object-cover group-hover:scale-105 transition ease-linear" src={props.coverImg} width={260} height={260} alt={`Picture of ${props.name}`}></Image></div>
+            <div className="bg-blue-200 h-48 relative rounded-lg overflow-hidden"><Image className="absolute h-full w-full object-cover group-hover:scale-105 transition ease-linear" src={props.coverImg} width={260} height={260} alt={`Picture of ${props.name}`}></Image></div>
             <div className="">{props.shortDesc}</div>
         </Link>
     )
