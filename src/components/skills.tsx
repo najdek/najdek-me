@@ -1,5 +1,4 @@
 import { skillList } from "@/app/skills";
-import { url } from "inspector";
 function Skill(props: any) {
 
     return (

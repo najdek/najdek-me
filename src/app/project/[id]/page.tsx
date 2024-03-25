@@ -14,22 +14,6 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
 
   const router = useRouter();
 
-  /*
-    {
-      id: "project-1",
-      name: "Project name 1",
-      shortDesc: "Short description of project 1",
-      fullDesc: "Longer description",
-      pageUrl: "https://najdek.me/",
-      githubUrl: "https://github.com/najdek",
-      images: [
-        "/testimg.png",
-        "/testimg.png",
-        "/testimg.png"
-      ]
-    },
-  */
-
   return (
     <div>
       <NavbarFixed />

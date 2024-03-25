@@ -1,4 +1,3 @@
-import { projectList } from "@/app/projects";
 import Image from "next/image";
 import { useState } from "react";
 
