@@ -5,7 +5,7 @@ function Skill(props: any) {
     return (
         <div className="flex bg-sky-50 py-2 px-4 rounded-lg drop-shadow-md max-w-xs lg:max-w-sm m-2 space-x-4">
             <div className="min-w-[30%] flex flex-col justify-center">
-                <div className="w-full h-20 bg-no-repeat bg-center bg-contain" Style={`background-image: url("${props.icon}")`}></div>
+                <div className="w-full h-20 bg-no-repeat bg-center bg-contain" style={{backgroundImage: `url("${props.icon}")`}}></div>
                 <div className="font-semibold text-sm mt-2">{props.name}</div>
             </div>
             <div className="flex items-center text-sm">{props.desc}</div>
