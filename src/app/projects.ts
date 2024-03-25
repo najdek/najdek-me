@@ -100,7 +100,7 @@ Made with PHP/MySQL/HTML/JavaScript/CSS
     name: "This Portfolio",
     shortDesc: "Made with React/Next.js",
     fullDesc: `This portfolio is my another React/Next.js project.
-    Created it without using any CSS libraries (only Tailwind, and FontAwesome icons).
+    Created it without using any big CSS libraries (only Tailwind, and FontAwesome icons).
 
     Checkout GitHub link below for source code.
     `,

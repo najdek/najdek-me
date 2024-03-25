@@ -29,7 +29,7 @@ function GalleryPicker(props: any) {
     }
     project.images.forEach((element:string, i:number) => {
         out.push(
-            <div key={`gallery-pic-${project.id}-${i}`} onClick={() => handlePicturePick(i)} className={`${i == selectedPicture ? "border-yellow-400" : "border-gray-400 opacity-85"} border-2 m-1 cursor-pointer rounded-lg overflow-hidden`}>
+            <div key={`gallery-pic-${project.id}-${i}`} onClick={() => handlePicturePick(i)} className={`${i == selectedPicture ? "border-yellow-400" : "border-gray-400 opacity-75"} hover:opacity-100 border-2 m-1 cursor-pointer rounded-lg overflow-hidden`}>
                 <Image src={element} width={128} height={96} alt={`Picture of ${project.name} #${i}`} />
             </div>
         );

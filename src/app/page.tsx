@@ -46,7 +46,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col mx-auto text-center pt-[30vh] relative">
             <h1 className="text-3xl md:text-5xl text-white">Mateusz Najdek</h1>
-            <h2 className="text-l md:text-2xl mt-4 text-gray-100">Web developer</h2>
+            <h2 className="text-lg md:text-2xl mt-4 text-gray-100">Web developer</h2>
           </div>
           <NavbarHome passRef={navbarHome} navbarHomeTop={navbarHomeTop} />
         </section>

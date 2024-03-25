@@ -1,13 +1,14 @@
 import { skillList } from "@/app/skills";
+import { url } from "inspector";
 function Skill(props: any) {
 
     return (
-        <div className="flex bg-sky-50 py-2 px-4 rounded-lg drop-shadow-md max-w-sm m-2 space-x-4">
+        <div className="flex bg-sky-50 py-2 px-4 rounded-lg drop-shadow-md max-w-xs lg:max-w-sm m-2 space-x-4">
             <div className="min-w-[30%] flex flex-col justify-center">
-                <div className="bg-blue-200 w-full h-24">icon</div>
-                <div className="font-semibold">{props.name}</div>
+                <div className="w-full h-20 bg-no-repeat bg-center bg-contain" Style={`background-image: url("${props.icon}")`}></div>
+                <div className="font-semibold text-sm mt-2">{props.name}</div>
             </div>
-            <div className="flex items-center">{props.desc}</div>
+            <div className="flex items-center text-sm">{props.desc}</div>
         </div>
     )
 }
@@ -16,7 +17,7 @@ export function AllSkills() {
     var out: any = [];
     skillList.forEach((element, i) => {
         out.push(
-            <Skill key={`"skill-${i}`} name={element.name} desc={element.desc} />
+            <Skill key={`"skill-${i}`} name={element.name} desc={element.desc} icon={element.icon} />
         );
     });
     return (
