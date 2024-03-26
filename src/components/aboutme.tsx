@@ -1,4 +1,4 @@
-import { aboutMe } from "@/app/aboutme"
+import { aboutMe } from "@/data/aboutme"
 
 export function AboutMe() {
     return (

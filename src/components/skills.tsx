@@ -1,4 +1,4 @@
-import { skillList } from "@/app/skills";
+import { skillList } from "@/data/skills";
 function Skill(props: any) {
 
     return (

@@ -1,5 +1,5 @@
 "use client";
-import { projectList } from "@/app/projects";
+import { projectList } from "@/data/projects";
 import { Gallery } from "@/components/gallery";
 import { ProjectDescLink } from "@/components/links";
 import { NavbarFixed } from "@/components/navbar";

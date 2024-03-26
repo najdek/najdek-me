@@ -1,4 +1,4 @@
-import { projectList } from "@/app/projects";
+import { projectList } from "@/data/projects";
 import Link from "next/link";
 import Image from "next/image";
 
