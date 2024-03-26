@@ -35,6 +35,11 @@ export const skillList = [
     icon: "/skills_icons/docker.svg",
   },
   {
+    name: "Azure/GCP",
+    desc: "Experience with Microsoft Azure and Google Cloud Platform (GCP), primarily for hosting virtual private servers (VPS).",
+    icon: "/skills_icons/azuregcp.svg",
+  },
+  {
     name: "Graphic Design",
     desc: "Extensive experience with Adobe Photoshop and Adobe Illustrator. Used these tools for designing a wide range of projects including t-shirts, mugs, logos, brochures, and more.",
     icon: "/skills_icons/psai.svg",
