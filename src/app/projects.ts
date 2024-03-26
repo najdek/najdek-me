@@ -93,6 +93,7 @@ Made with PHP/MySQL/HTML/JavaScript/CSS
       "/project_images/carbon-for-f1tv/01.png",
       "/project_images/carbon-for-f1tv/02.png",
       "/project_images/carbon-for-f1tv/03.png",
+      "/project_images/carbon-for-f1tv/04.png",
     ],
   },
   {
@@ -119,5 +120,34 @@ Made with PHP/MySQL/HTML/JavaScript/CSS
     githubUrl: "https://github.com/najdek/monmat_pl_page",
     pageUrl: "https://monmat.pl",
     images: ["/project_images/monmat-pl/01.png"],
+  },
+  {
+    id: "temp",
+    name: "Temperatures",
+    shortDesc: "Home temperature monitor",
+    fullDesc: `My custom solution for monitoring temperatures in home.
+    Frontend in HTML/JS/CSS, with material-components-web library.
+    Backend in PHP.
+    DIY temperature sensors, using ESP8266 wifi boards and DS18B20 or DHT22 sensors.
+
+    You can check the backend source on my GitHub.
+    I want to improve the frontend part before releasing it to the public.
+    `,
+    githubUrl: "https://github.com/najdek/temp_api",
+    images: ["/project_images/temp/01.png"],
+  },
+  {
+    id: "heat",
+    name: "Smart Heating",
+    shortDesc: "Home heating control",
+    fullDesc: `My custom solution for controling home heating.
+    Frontend in HTML/JS/CSS, with MaterializeCSS. I've stylized it to look like Samsung's OneUI.
+    Backend in PHP, with MySQL database.
+    Raspberry Pi is sending start/stop signals to "dumb" heating controller, based on this app's backend response.
+    `,
+    images: [
+      "/project_images/heat/01.png",
+      "/project_images/heat/02.png",
+     ],
   },
 ];
