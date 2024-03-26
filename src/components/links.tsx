@@ -23,7 +23,7 @@ export function ProjectDescLink(props:any) {
 
 
     return (
-        <a href={props.url} className="flex flex-row items-center max-w-max mt-2"><FontAwesomeIcon className="h-4" icon={icon} /><span className="mx-2">{name}</span></a>
+        <a href={props.url} className="flex flex-row items-center max-w-max mt-2 p-2 rounded-lg drop-shadow-md bg-sky-100 hover:bg-blue-100"><FontAwesomeIcon className="h-4" icon={icon} /><span className="mx-2">{name}</span></a>
     )
 
 }
