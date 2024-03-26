@@ -23,7 +23,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
             <div className="text-md">{`<- Go Back`}</div>
           </div>
           <div className="mt-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 grid-rows-[3rem_auto]">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 grid-rows-[3rem_auto] mx-4">
               <div className="col-span-1 row-span-2 order-2 lg:order-1 justify-self-center lg:justify-self-end text-center p-4 rounded-lg drop-shadow-md bg-sky-50">
                 <Gallery project={project} />
               </div>
