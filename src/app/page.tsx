@@ -3,6 +3,8 @@ import { AboutMe } from "@/components/aboutme";
 import { NavbarFixed, NavbarHome } from "@/components/navbar";
 import { AllProjects } from "@/components/projects";
 import { AllSkills } from "@/components/skills";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
@@ -39,9 +41,11 @@ export default function Home() {
         <section className="flex justify-between flex-col supports-[height:100cqh]:h-[100cqh] supports-[height:100svh]:h-[100svh] relative">
           <div className="absolute z-1 -bottom-1 left-0 w-full min-h-[50vh] bg-top bg-cover" style={{ backgroundImage: `url('/waves-02.svg')` }}>
           </div>
-          <div ref={arrowBtn} className={`absolute z-1 bottom-36 sm:bottom-24 lg:bottom-16 left-1/2 -translate-x-1/2 p-8 cursor-pointer ${scrollPos > 5 ? "fadeout-animation pointer-events-none" : "fadein-animation"}`} onClick={handleArrowClick}>
+          <div ref={arrowBtn} className={`absolute z-20 bottom-36 sm:bottom-24 lg:bottom-16 left-1/2 -translate-x-1/2 p-2 cursor-pointer ${scrollPos > 5 ? "fadeout-animation pointer-events-none" : "fadein-animation"}`} onClick={handleArrowClick}>
             <div className="bounce-animation">
-              <div className={`rotate-90 text-4xl text-sky-600`}>{'->'}</div>
+              <div className={`text-4xl text-sky-600 bg-sky-100 backdrop-blur-sm bg-opacity-50 p-4 rounded-full`}>
+              <FontAwesomeIcon className="h-8" icon={faArrowDown} />
+              </div>
             </div>
           </div>
           <div className="flex flex-col mx-auto text-center pt-[30vh] relative">
