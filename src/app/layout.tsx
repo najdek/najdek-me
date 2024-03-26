@@ -26,7 +26,7 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/icons/favicon.ico" />
         <meta name="msapplication-TileColor" content="#2d89ef" />
         <meta name="msapplication-config" content="/icons/browserconfig.xml" />
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#d6effe" />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
