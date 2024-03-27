@@ -7,7 +7,7 @@ function GalleryBigImage(props: any) {
     const selectedPicture = passProps.selectedPicture;
 
     return (
-        <div className="rounded-lg overflow-hidden border-2 border-gray-400">
+        <div className="rounded-lg overflow-hidden border-2 border-gray-400 dark:border-gray-700">
             <Image src={project.images[selectedPicture]} width={640} height={480} alt={`Picture of ${project.name} #${selectedPicture}`} />
         </div>
     )
@@ -28,7 +28,7 @@ function GalleryPicker(props: any) {
     }
     project.images.forEach((element:string, i:number) => {
         out.push(
-            <div key={`gallery-pic-${project.id}-${i}`} onClick={() => handlePicturePick(i)} className={`${i == selectedPicture ? "border-yellow-400" : "border-gray-400 opacity-75"} hover:opacity-100 border-2 m-1 cursor-pointer rounded-lg overflow-hidden`}>
+            <div key={`gallery-pic-${project.id}-${i}`} onClick={() => handlePicturePick(i)} className={`${i == selectedPicture ? "border-yellow-400 dark:border-yellow-600" : "border-gray-400 dark:border-gray-700 opacity-75"} hover:opacity-100 border-2 m-1 cursor-pointer rounded-lg overflow-hidden`}>
                 <Image src={element} width={128} height={96} alt={`Picture of ${project.name} #${i}`} />
             </div>
         );

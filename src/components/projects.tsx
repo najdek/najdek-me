@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function Project(props: any) {
     return (
-        <Link href={`./project/${props.id}`} className="group dire bg-sky-50 hover:bg-sky-100 transition ease-linear py-2 px-4 rounded-lg drop-shadow-md m-2 w-[256px]">
+        <Link href={`./project/${props.id}`} className="group dire bg-sky-50 hover:bg-sky-100 dark:bg-cyan-950 dark:text-gray-300 dark:hover:bg-cyan-900 transition ease-linear py-2 px-4 rounded-lg drop-shadow-md m-2 w-[256px]">
             <div className="font-semibold">{props.name}</div>
             <div className="text-sm">{props.shortDesc}</div>
             <div className="bg-blue-200 h-48 mt-2 relative rounded-lg overflow-hidden"><Image className="absolute h-full w-full object-cover group-hover:scale-105 transition ease-linear" src={props.coverImg} width={260} height={260} alt={`Picture of ${props.name}`}></Image></div>
@@ -21,7 +21,7 @@ export function AllProjects() {
     });
     return (
         <div className="flex flex-col mx-auto text-center relative mt-16">
-            <h1 className="text-3xl text-gray-900">Projects</h1>
+            <h1 className="text-3xl text-gray-900 dark:dark:text-gray-200">Projects</h1>
             <div className="flex flex-wrap justify-center mt-4 container">
                 {out}
             </div>
