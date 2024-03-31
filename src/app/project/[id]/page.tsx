@@ -30,6 +30,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
               <div className="text-md whitespace-pre-line">{project.fullDesc}</div>
               <div className="mt-6">
                 <ProjectDescLink type="github" url={project.githubUrl} />
+                <ProjectDescLink type="github" url={project.githubAltUrl} />
                 <ProjectDescLink type="page" url={project.pageUrl} />
               </div>
             </div>

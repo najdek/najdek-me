@@ -130,10 +130,10 @@ Made with PHP/MySQL/HTML/JavaScript/CSS
     Backend in PHP.
     DIY temperature sensors, using ESP8266 wifi boards and DS18B20 or DHT22 sensors.
 
-    You can check the backend source on my GitHub.
-    I want to improve the frontend part before releasing it to the public.
+    Currently remaking the frontend app in React/Vite.
     `,
-    githubUrl: "https://github.com/najdek/temp_api",
+    githubUrl: "https://github.com/najdek/TemperatureViewer",
+    githubAltUrl: "https://github.com/najdek/temp_api",
     images: ["/project_images/temp/01.png"],
   },
   {
